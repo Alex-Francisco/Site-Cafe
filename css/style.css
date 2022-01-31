@@ -1,1 +1,242 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+  --cor-principal: #d3ad7f;
+  --preto: #13131a;
+  --fundo: #010103;
+  --borda: .1rem solid rgba(255, 255, 255, .3);
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body {
+  background: var(--fundo);
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--cor-principal);
+  cursor: pointer;
+}
+
+.btn:hover {
+  letter-spacing: .2rem;
+}
+
+.header {
+  background: var(--fundo);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--borda);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header .logo img {
+  height: 6rem;
+}
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  color: var(--cor-principal);
+  border-bottom: .1rem solid var(--cor-principal);
+  padding-bottom: .5rem;
+}
+
+.header .icones div {
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+.header .icones div:hover {
+  color: var(--cor-principal);
+}
+
+#btn-menu {
+  display: none;
+}
+
+.header .procura-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.header .procura-form.ativo {
+  transform: scaleY(1);
+}
+
+.header .procura-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--preto);
+  padding: 1rem;
+  text-transform: none;
+}
+
+.header .procura-form label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  color: var(--preto);
+}
+
+.header .procura-form label:hover {
+  color: var(--cor-principal);
+}
+
+.header .container-itens-carrinho {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  height: calc(100vh - 9.5rem);
+  width: 35rem;
+  background: #fff;
+  padding: 0 1.5rem;
+}
+
+.header .container-itens-carrinho.ativo {
+  right: 0;
+}
+
+.header .container-itens-carrinho .itens-carrinho {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header .container-itens-carrinho .itens-carrinho .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--preto);
+}
+
+.header .container-itens-carrinho .itens-carrinho .fa-times:hover {
+  color: var(--cor-principal);
+}
+
+.header .container-itens-carrinho .itens-carrinho img {
+  height: 7rem;
+}
+
+.header .container-itens-carrinho .itens-carrinho .content h3 {
+  font-size: 2rem;
+  color: var(--preto);
+  padding-bottom: .5rem;
+}
+
+.header .container-itens-carrinho .itens-carrinho .content .preco {
+  font-size: 1.5rem;
+  color: var(--cor-principal);
+}
+
+.header .container-itens-carrinho .btn {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #btn-menu {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .header .navbar.ativo {
+    right: 0;
+  }
+
+  .header .navbar a {
+    color: var(--preto);
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+  }
+
+  .header .procura-form {
+    width: 90%;
+    right: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
