@@ -407,8 +407,151 @@ section {
   color: var(--cor-principal);
 }
 
+.contato .row {
+  display: flex;
+  background: var(--preto);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
+.contato .row .mapa {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
 
+.contato .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contato .row form h3 {
+   text-transform: uppercase;
+   font-size: 3.5rem;
+   color: #fff;
+}
+
+.contato .row form .caixa-input {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: var(--preto);
+  border: var(--borda);
+}
+
+.contato .row form .caixa-input span {
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.contato .row form .caixa-input input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+}
+
+.blogs .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.blogs .box-container .box {
+  border: var(--borda);
+}
+
+.blogs .box-container .box .imagem {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.blogs .box-container .box .imagem img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.blogs .box-container .box:hover .imagem img {
+  transform: scale(1.2);
+}
+
+.blogs .box-container .box .content {
+  padding: 2rem;
+}
+
+.blogs .box-container .box .content .titulo {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.blogs .box-container .box .content .titulo:hover {
+  color: var(--cor-principal);
+}
+
+.blogs .box-container .box .content span {
+  color: var(--cor-principal);
+  display: block;
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+.blogs .box-container .box .content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #ccc;
+  padding: 1rem 0;
+}
+
+.footer {
+  background: var(--preto);
+  text-align: center;
+}
+
+.footer .compartilhar {
+  padding: 1rem 0;
+}
+
+.footer .compartilhar a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  border: var(--borda);
+  margin: .3rem;
+  border-radius: 50%;
+}
+
+.footer .compartilhar a:hover {
+  background-color: var(--cor-principal);
+}
+
+.footer .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.footer .links a {
+  padding: .7rem 2rem;
+  color: #fff;
+  border: var(--borda);
+  font-size: 2rem;
+}
+
+.footer .links a:hover {
+  background: var(--cor-principal);
+}
 
 
 
